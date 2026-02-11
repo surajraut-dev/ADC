@@ -19,7 +19,7 @@ export default function Header() {
       {/* Empty spacer div for left side */}
       <div className={styles.left}>
       <Link href="/MainMenu" className="inline-flex items-center gap-2 text-blue-600 font-semibold">
-      Book tests Now!
+      Tests
       <motion.span
         initial={{ x: 0 }}
         animate={{ x: [0, 5, 0] }}

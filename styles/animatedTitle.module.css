@@ -1,0 +1,13 @@
+/* components/AnimatedTitle.module.css */
+.overlay {
+  position: fixed; /* covers entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black; /* optional background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* sits above everything */
+}

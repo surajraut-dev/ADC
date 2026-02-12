@@ -22,7 +22,7 @@
 .logo {
   flex: 1;
   display: flex;
-  justify-content: center; /* centers logo horizontally */
+  justify-content: left; /* centers logo horizontally */
 }
 
 .rightmenuicons {
@@ -34,4 +34,5 @@
 .CartDiv{
   display: flex;
 }
+
 

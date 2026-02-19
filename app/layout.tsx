@@ -6,7 +6,7 @@ import { Providers } from "../src/components/Providers";
 
 
 import { CartProvider } from "../context/CartContext";
-import { SessionProvider } from "next-auth/react";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

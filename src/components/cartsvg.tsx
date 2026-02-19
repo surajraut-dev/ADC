@@ -1,5 +1,10 @@
 "use client";
+import { useRouter } from "next/navigation";
+
+
 export default function CartWithCount({ count }: { count: number }) {
+const router = useRouter();
+const handleClick = () => router.push("/cart");
   return (
     <div style={{ position: "relative", display: "inline-block" }}>
       <svg
@@ -8,7 +13,7 @@ export default function CartWithCount({ count }: { count: number }) {
         height={25}
         fill="currentColor"
         viewBox="0 0 24 24"
-        style={{ marginTop: "50%" }}
+        style={{ marginTop: "50%" }} onClick={handleClick}
       >
         <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 
                  0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.82 

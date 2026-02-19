@@ -5,14 +5,14 @@ import Image from 'next/image';
 import styles from '../../styles/header.module.css';
 import { useCart } from "../../context/CartContext";
 import CartWithCount from "../components/cartsvg";
-import { motion } from "framer-motion";
 import LoginButton from "../components/loginButton";
-import { SessionProvider } from "next-auth/react";
-import { signIn, signOut, useSession } from "next-auth/react";
+import {  useSession } from "next-auth/react";
 
 export default function Header() {
-  const { dispatch } = useCart();
+  const { state } = useCart();
   const { data: session } = useSession();
+  const totalCount = state.items.reduce((sum, item) => sum + item.quantity, 0)
+
 
   return (
     <header className={styles.header}>
@@ -52,7 +52,7 @@ export default function Header() {
         </div>
 
        <div className={styles.CartDiv}>
-          {session  && (<CartWithCount count={12}/>)}
+          {session  && (<CartWithCount count={totalCount}/>)}
        </div>
         <Link href="/MainMenu">
           <Image src="/AshMenu.png" alt="Menu" height={50} width={50} />
